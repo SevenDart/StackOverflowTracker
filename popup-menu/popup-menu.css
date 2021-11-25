@@ -1,0 +1,20 @@
+.menu {
+    width: 150px;
+}
+
+.menu-header {
+    font-size: 18px;
+    text-align: center;
+}
+
+.information {
+    margin: 0 auto;
+}
+
+.count {
+    font-size: 14px;
+}
+
+hr {
+    margin: 0;
+}
