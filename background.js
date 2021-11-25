@@ -1,6 +1,19 @@
-let color = '#3aa757';
+//main listener
+chrome.webNavigation.onCommitted.addListener((details) => {
+    if (details.url.startsWith('https://stackoverflow.com/')) {
+        console.log('catched!', details.timeStamp);
+        updateTotalVisits();
+    }
+})
 
-chrome.runtime.onInstalled.addListener(() => {
-    chrome.storage.sync.set({ color });
-    console.log('Default background color set to %cgreen', `color: ${color}`);
-});
+function updateTotalVisits() {
+    chrome.storage.sync.get(['totalVisits'], (result) => {
+        let totalVisits = result.totalVisits;
+        if (!totalVisits) {
+            chrome.storage.sync.set({totalVisits: 0});
+            totalVisits = 0;
+        }
+        totalVisits += 1;
+        chrome.storage.sync.set({totalVisits: totalVisits});
+    });
+}

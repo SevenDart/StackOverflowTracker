@@ -1,12 +1,12 @@
 {
   "name": "StackOverflow tracker",
   "description": "How often do you visit StackOverflow?",
-  "version": "0.0.1",
+  "version": "0.5",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"
   },
-  "permissions": ["storage"],
+  "permissions": ["storage", "webNavigation"],
   "action": {
     "default_popup": "./popup-menu/popup-menu.html",
     "default_icon": {
@@ -15,5 +15,11 @@
       "48": "/images/Stack_Overflow_64.png",
       "128": "/images/Stack_Overflow_128.png"
     }
+  },
+  "icons": {
+    "16": "/images/Stack_Overflow_16.png",
+    "32": "/images/Stack_Overflow_32.png",
+    "48": "/images/Stack_Overflow_64.png",
+    "128": "/images/Stack_Overflow_128.png"
   }
 }
