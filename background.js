@@ -31,5 +31,9 @@ function updateTodayVisits() {
 }
 
 {
-    chrome.storage.sync.set({totalVisits: 0, todayVisits: 0, lastVisit: Date.now()});
+    chrome.storage.sync.get(null, (result) => {
+        if (!result.totalVisits || !result.todayVisits || !result.lastVisit) {
+            chrome.storage.sync.set({totalVisits: 0, todayVisits: 0, lastVisit: Date.now()});
+        }
+    });
 }
