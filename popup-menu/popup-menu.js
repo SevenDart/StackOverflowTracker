@@ -22,4 +22,8 @@ function updatePopup(todayVisits, totalVisits) {
     totalCountElement.textContent = totalVisits;
 }
 
+function resetInformation() {
+    chrome.storage.sync.set({totalVisits: 0, todayVisits: 0, lastVisit: Date.now()});
+}
+
 retrieveInformation();

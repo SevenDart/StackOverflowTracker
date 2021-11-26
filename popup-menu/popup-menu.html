@@ -6,8 +6,9 @@
 </head>
 <body>
 <div class="menu">
-    <h1 class="menu-header">StackOverflow Tracker</h1>
-    <hr>
+    <img src="../images/logo-stackoverflow.png" class="menu-logo">
+    <h1 class="menu-header">Tracker</h1>
+    <div class="divider"></div>
     <div class="today information">
         <h2 class="header">Today:</h2>
         <div class="count">
@@ -15,7 +16,7 @@
             <span> visits</span>
         </div>
     </div>
-    <hr>
+    <div class="divider"></div>
     <div class="total information">
         <h2 class="header">Total:</h2>
         <div class="count">
@@ -23,6 +24,7 @@
             <span> visits</span>
         </div>
     </div>
+    <button class="reset-button" onclick="resetInformation()">Reset</button>
 </div>
 <script src="popup-menu.js"></script>
 </body>
