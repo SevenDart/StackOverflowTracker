@@ -1,6 +1,7 @@
 //main listener
 chrome.webNavigation.onCommitted.addListener((details) => {
-    if (details.url.startsWith('https://stackoverflow.com/')) {
+    if (details.url.match(/https://*.stackoverflow.com/*/)) {
+        console.log('Catched!');
         updateTotalVisits();
         updateTodayVisits();
     }
