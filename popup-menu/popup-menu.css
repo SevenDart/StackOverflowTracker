@@ -25,7 +25,7 @@
     background-color: orange;
 }
 
-.reset-button {
+#reset-button {
     cursor: pointer;
     display: block;
     margin: 0 auto;
