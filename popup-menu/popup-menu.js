@@ -27,3 +27,5 @@ function resetInformation() {
 }
 
 retrieveInformation();
+
+document.getElementById("reset-button").addEventListener("click", resetInformation);
